@@ -1,8 +1,8 @@
-baseurl = "http://localhost:1313"
+baseurl = "https://www.porsentido.com"
 languageCode = "pt-br"
 paginate = 6
 theme = "porsentido"
-title = "Iglu: Design, Freelancers, Programação e Marketing Digital"
+title = "Pôr Sentido"
 enableRobotsTXT = true
 [params]
 date_format = "0002-01-20T00:00:00+00:00"
@@ -12,7 +12,7 @@ insta_comments = "{{comments}}"
 insta_img = "{{image}}"
 insta_likes = "{{likes}}"
 insta_link = "{{link}}"
-name = "Iglu: Design, Freelancers, Programação e Marketing Digital"
+name = "Pôr Sentido"
 [params.featured]
 hide = false
 [params.recentposts]

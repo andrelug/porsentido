@@ -1,0 +1,12 @@
+name = "Pôr Sentido"
+license = "Creative Commons Attribution 3.0 Unported"
+licenselink = "//github.com/andrelug/igluhugo/blob/master/LICENSE.md"
+description = "Iglu é o melhor lugar para tutoriais sobre Design, Photoshop, Programação, Markegin Digital e Freelance."
+homepage = "https://www.igluonline.com"
+tags = ["design", "programação", "web development", "freelancer", "blog", "iglu"]
+features = ["", ""]
+min_version = 0.16
+
+[author]
+  name = "André Lucas"
+  homepage = "//github.com/andrelug"

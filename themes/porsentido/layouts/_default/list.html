@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+	<div class="sp-row post-layout">
+
+		{{ range .Data.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+
+		{{ partial "pagination" . }}
+	</div>
+
+{{ end }}
+
+{{ define "categoria" }}
+	<div class="archive-box-wrapper">
+		<div class="archive-box">
+			<span>Encontre tudo sobre</span>
+			<h1>{{ .Title}}</h1>
+		</div>
+	</div>
+{{ end }}

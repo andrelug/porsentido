@@ -1,0 +1,35 @@
+<div id="featured-area" class="promo-active">
+
+	<div class="sideslides" style="visibility: visible;">
+
+		<div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+			<div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 737px;">
+				<div class="bxslider" style="width: auto; position: relative;">
+
+					<div class="slide-item" style="float: none; list-style: none; position: absolute; width: 1500px; z-index: 50; display: block;">
+						<div class="feat-item" style="background-image:url({{if .Param "hugo_image"}}{{ .Param "hugo_image"}}{{else}}images/{{ .Param "featured_image" }}.{{ .Param "featured_image_extension" }}{{ end }});"></div>
+						<div class="feat-overlay">
+
+							<span class="cat">
+								{{ range .Params.categories }}
+									<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+								{{ end }}
+							</span>
+
+							<h2>
+								<a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+							<p>{{slicestr .Summary 0 90 | markdownify }}...</p>
+							<div class="feat-read-more">
+								<a href="{{ .RelPermalink }}" class="read-more">Leia mais</a>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>

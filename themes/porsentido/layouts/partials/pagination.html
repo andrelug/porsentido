@@ -1,0 +1,53 @@
+<nav class="navigation pagination" role="navigation">
+	<h2 class="screen-reader-text">Mais artigos</h2>
+	<div class="nav-links">
+	{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		{{ $current := .Paginator.PageNumber }}
+		{{ if ge $current 4 }}
+			<a class="prev page-numbers" href="{{.Paginator.First.URL}}">Primeira</a>
+		{{ end }}
+
+	    {{ if .Paginator.HasPrev }}
+			<a class="prev page-numbers" href="{{.Paginator.Prev.URL}}">Anterior</a>
+	    {{ end }}
+
+
+		{{ if ge $current 4 }}
+			<span class="page-numbers dots">…</span>
+		{{ end }}
+
+
+
+		{{ range $i, $sequence :=  (seq .Paginator.TotalPages) }}
+
+				{{ if eq $sequence $current }}
+					<span class="page-numbers current">{{ $sequence }}</span>
+				{{ else if eq $sequence (add $current 1) }}
+					<a class="page-numbers" href="/page/{{ $sequence }}/">{{ $sequence }}</a>
+				{{ else if eq $sequence (add $current 2) }}
+					<a class="page-numbers" href="/page/{{ $sequence }}/">{{ $sequence }}</a>
+				{{ else if eq $sequence (sub $current 1) }}
+					<a class="page-numbers" href="/page/{{ $sequence }}/">{{ $sequence }}</a>
+				{{ else if eq $sequence (sub $current 2) }}
+					<a class="page-numbers" href="/page/{{ $sequence }}/">{{ $sequence }}</a>
+				{{ end }}
+
+		{{ end }}
+
+		{{ if ge .Paginator.TotalPages 5}}
+			{{ if le $current (sub .Paginator.TotalPages 3) }}
+				<span class="page-numbers dots">…</span>
+			{{ end }}
+		{{ end }}
+
+	    {{ if .Paginator.HasNext }}
+			<a class="next page-numbers" href="{{.Paginator.Next.URL}}">Próxima</a>
+	    {{ end }}
+		{{ if ge .Paginator.TotalPages 5}}
+			{{ if le $current (sub .Paginator.TotalPages 3) }}
+				<a class="next page-numbers" href="{{.Paginator.Last.URL}}">Última</a>
+			{{ end }}
+		{{ end }}
+	{{ end }}
+</div>
+</nav>

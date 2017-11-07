@@ -1,0 +1,76 @@
+---
+pages:
+- post/por-que-troquei-o-wordpress-pelo-gerador-de-websites-estaticos-hugo.md
+- post/a-diferenca-entre-indie-e-aaa.md
+- post/os-10-piores-tipos-de-conquistas/trofeus.md
+- post/o-bullying-virtual-huehue.md
+- post/o-papel-do-video-game-na-educacao-contemporanea.md
+- post/as-franquias-anuais-estao-destruindo-o-mercado-de-games.md
+- post/por-que-os-estudios-fazem-dlc-de-primeiro-dia.md
+- post/pirataria-no-mercado-brasileiro.md
+- post/violencia-no-mundo-digital-vs-mundo-real.md
+- post/lego-worlds-o-minecraft-da-lego.md
+- post/minha-experiencia-com-star-citizen-2-5.md
+- post/o-final-de-bioshock-infinite.md
+- post/11-dicas-para-comecar-a-jogar-ark-survival-evolved.md
+- post/projeto-mini-vidas-trabalho-remoto-como-nomade-digital.md
+- post/gueime-foi-uma-longa-e-maravilhosa-jornada-mas-esta-na-hora-do-proximo-nivel.md
+- post/obsolescencia-programada-e-o-maior-aproveitamento.md
+- post/afinal-o-que-e-gamificacao.md
+- post/as-melhores-formas-de-criar-seu-site-de-graca-em-2017.md
+- post/os-melhores-editores-de-texto-para-programacao-em-2017.md
+- post/as-melhores-fontes-gratuitas-de-julho-de-2017.md
+- post/como-melhorar-drasticamente-a-performance-do-seu-site.md
+- post/7-dicas-de-gerenciamento-de-projetos-para-freelancers.md
+- post/as-melhores-fontes-gratuitas-de-maio-2017.md
+- post/introducao-ao-sass-um-guia-para-iniciantes.md
+- post/o-caminho-do-desenvolvedor-web-2017.md
+- post/6-documentarios-sobre-design.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: André Lucas
+  config:
+    required: false
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: post
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: url
+  label: Url
+  type: text
+  hidden: false
+  default: ''
+- name: youtube
+  label: Youtube
+  type: text
+  hidden: false
+  default: ''
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: ''
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default: ''
+- name: hugo_image
+  type: file
+  label: Hugo Image
+  description: Imagem destacada

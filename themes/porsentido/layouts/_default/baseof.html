@@ -1,0 +1,69 @@
+{{ partial "head" . }}
+<body class="home blog" cz-shortcut-listen="true">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=546890322023473';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div id="wrapper">
+		{{ partial "header" . }}
+
+		<div id="inner-wrapper">
+			<div id="mobile-logo">
+				<a href="http://solopine.com/laurel/"><img src="http://solopine.com/laurel/wp-content/themes/laurel/img/logo.png" alt="Laurel"></a>
+			</div>
+			{{if .IsHome}}
+				{{ if not .Site.Params.featured.hide }}
+					{{ range first 1 (where .Site.Pages "Type" "post")}}
+						{{ partial "featuredAreaHeader" . }}
+					{{ end }}
+				{{ end }}
+
+				{{ partial "promoAreaHeader" . }}
+			{{ end }}
+
+			{{ block "categoria" . }}{{ end }}
+			
+			<div class="sp-container">
+				<div class="sp-row">
+					<div id="main">
+
+					  {{ block "main" . }}{{ end }}
+
+			      	</div>
+			      	{{ partial "sidebar" . }}
+			    </div>
+		 	</div>
+
+			{{ partial "footer" . }}
+		  <!-- END INNER WRAPPER -->
+	    </div>
+	  <!-- END WRAPPER -->
+	  </div>
+	  <!-- Scrips -->
+	  <script type="text/javascript" src="/js/jquery.slicknav.min.js"></script>
+	  <script type="text/javascript" src="/js/fitvids.js"></script>
+	  <script type="text/javascript" src="/js/solopine.js"></script>
+	  <script type="text/javascript" src="/js/instagram.js"></script>
+
+
+	  <script type="text/javascript">
+	  var feed = new Instafeed({
+	  	get: 'user',
+	  	accessToken: '11215896.0a593a8.e55ebd9ba4ad48a1b5f712e7b42049fc',
+	  	clientId: ' 0a593a8f16e549a38e8192ba6968e373',
+	  	userId: '11215896',
+	  	limit: 6,
+	  	resolution: 'standard_resolution',
+	  	template: '<li class=""><a href="{{.Site.Params.insta_link}}" target="_blank" rel="noopener" class=""><img src="{{.Site.Params.insta_img}}" class="" alt="{{.Site.Params.insta_caption}}"></a></li>'
+	  });
+	  feed.run();
+	  </script>
+
+  </body>
+
+</html>

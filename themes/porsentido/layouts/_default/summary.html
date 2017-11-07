@@ -1,0 +1,65 @@
+<div class="sp-col-12">
+	<article id="post-28" class="list-item post-28 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle">
+
+		<div class="post-img">
+			<a href="{{ .Permalink }}">
+				{{if .Param "hugo_image"}}
+					<img style="height:100%;max-width:initial;margin-left:-50%;max-height:254px;" width="520" height="400" src="/{{ .Param "hugo_image"}}" class="attachment-laurel-misc-thumb size-laurel-misc-thumb wp-post-image" alt="imagem de post">
+				{{ else }}
+					<img style="height:100%;max-width:initial;margin-left:-50%;max-height:254px;" width="520" height="400" src="/images/{{ .Param "featured_image" }}.{{ .Param "featured_image_extension" }}" class="attachment-laurel-misc-thumb size-laurel-misc-thumb wp-post-image" alt="imagem de post">
+				{{ end }}
+			</a>
+		</div>
+
+		<div class="list-content">
+
+			<div class="post-header ">
+
+				<span class="cat">
+					{{ if isset .Params "categories" }}
+						{{ range  .Params.categories }}
+							<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+						{{ end }}
+					{{ end }}
+				</span>
+
+				<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+			</div>
+
+			<div class="post-entry is-excerpt">
+
+				<p>{{slicestr .Summary 0 120 | markdownify }}...</p>
+
+				<div class="read-more-wrapper">
+					<a href="{{ .Permalink }}" class="read-more">Ler artigo</a>
+				</div>
+
+			</div>
+
+			<div class="post-meta">
+
+				<div class="meta-left">
+					<span class="date"><span class="by">Criado em</span> {{ .Date.Format "02/01/2006" }}</span>
+				</div>
+
+				<div class="meta-right">
+					<div class="share">
+						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"><i class="fa fa-facebook"></i></a>
+						<a target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article:%20Thoughtful+Living+in+Los+Angeles&amp;url={{ .Permalink }}"><i class="fa fa-twitter"></i></a>
+						<a data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url={{ .Permalink }}&amp;media={{ .Site.BaseURL }}/{{ if .Param "hugo_image"}}{{ .Param "hugo_image"}}{{else}}images/{{.Param "featured_image" }}.{{ .Param "featured_image_extension" }}{{end}}&url={{.Site.BaseURL}}{{ .RelPermalink }}"><i class="fa fa-pinterest"></i></a>
+						<a target="_blank" href="https://plus.google.com/share?url={{ .Permalink }}"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<!--
+					<div class="meta-comment">
+						<a href="http://solopine.com/laurel/thoughtful-living-in-los-angeles/#comments">2 <i class="fa fa-comment-o"></i></a>
+					</div>
+					-->
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+</div>

@@ -1,0 +1,122 @@
+<aside id="sidebar">
+	<div id="laurel_about_widget-2" class="widget laurel_about_widget">
+		<div class="about-widget">
+
+			<div class="about-img">
+				<a href="/sobre"><img src="/tubis.jpg" alt=""></a> </div>
+
+			<p>Somos legais :)</p>
+
+			<span class="about-autograph">
+				<img src="http://solopine.com/laurel/wp-content/uploads/2016/10/signing.png" alt="">
+			</span>
+
+		</div>
+
+	</div>
+	<div id="laurel_social_widget-2" class="widget laurel_social_widget">
+		<h4 class="widget-title">A Pôr Sentido nas Mídias</h4>
+		<div class="social-widget">
+			<a href="http://facebook.com/solopinedesigns" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="http://twitter.com/solopinedesigns" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://instagram.com/solopine" target="_blank"><i class="fa fa-instagram"></i></a>
+			<a href="http://pinterest.com/#" target="_blank"><i class="fa fa-pinterest"></i></a>
+			<a href="http://bloglovin.com/#" target="_blank"><i class="fa fa-heart"></i></a>
+			<a href="http://plus.google.com/#" target="_blank"><i class="fa fa-google-plus"></i></a>
+			<a href="http://youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a>
+		</div>
+
+
+	</div>
+	<div id="mc4wp_form_widget-3" class="widget widget_mc4wp_form_widget">
+
+		<form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-13" method="post" data-id="13" data-name="">
+			<div class="mc4wp-form-fields">
+				<div class="subscribe-box">
+
+					<div class="subscribe-text">
+
+						<h4>Junte-se a nós!</h4>
+						<p>Se inscreva para as últimas novidades.</p>
+
+					</div>
+
+					<div class="subscribe-form">
+
+						<input type="email" name="EMAIL" placeholder="Your email address" required="">
+						<input type="submit" value="Subscribe">
+					</div>
+
+				</div>
+				<div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></div><input type="hidden" name="_mc4wp_timestamp" value="1510066063"><input type="hidden" name="_mc4wp_form_id" value="13"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"></div>
+			<div class="mc4wp-response"></div>
+		</form>
+
+	</div>
+	<div style="margin-bottom:22px;" class="noborder widget laurel_promo_widget">
+		<div class="promo-item" style="background-image:url(http://solopine.com/laurel/wp-content/uploads/2016/10/side-promo1.jpg); height:110px;">
+			<a class="promo-link" href="/categories/mini-vidas"></a>
+			<div class="promo-overlay">
+				<h4>Mini-vidas</h4>
+			</div>
+		</div>
+
+	</div>
+	<div style="margin-bottom:22px;" class="noborder widget laurel_promo_widget">
+		<div class="promo-item" style="background-image:url(http://solopine.com/laurel/wp-content/uploads/2016/10/side-promo3.jpg); height:110px;">
+			<a class="promo-link" href="/categories/reflexoes"></a>
+			<div class="promo-overlay">
+				<h4>Reflexões</h4>
+			</div>
+		</div>
+
+	</div>
+	<div style="margin-bottom:40px;" id="laurel_promo_widget-3" class="widget laurel_promo_widget">
+		<div class="promo-item" style="background-image:url(http://solopine.com/laurel/wp-content/uploads/2016/10/side-promo3.jpg); height:110px;">
+			<a class="promo-link" href="/categories/veganismo"></a>
+			<div class="promo-overlay">
+				<h4>Veganismo</h4>
+			</div>
+		</div>
+
+	</div>
+	<div id="laurel_latest_news_widget-2" class="widget laurel_latest_news_widget">
+		<h4 class="widget-title">Artigos que gostamos</h4>
+
+		{{ range $index, $element := (where .Site.Pages "Type" "post") | shuffle }}
+			{{ if le $index 2}}
+				<div class="side-pop list">
+
+					<div class="side-pop-img" style="overflow:hidden;">
+						<a href="{{ .Permalink }}" rel="bookmark">
+							{{if .Param "hugo_image"}}
+								<img style="height:30%;max-width:initial;max-height:73px;width:auto" width="520" height="400" src="/{{ .Param "hugo_image"}}" class="attachment-laurel-misc-thumb size-laurel-misc-thumb wp-post-image" alt="Artigo Relacionado">
+							{{ else }}
+								<img style="height:30%;max-width:initial;max-height:73px;width:auto" width="520" height="400" src="/images/{{ .Param "featured_image" }}.{{ .Param "featured_image_extension" }}" class="attachment-laurel-misc-thumb size-laurel-misc-thumb wp-post-image" alt="Artigo Relacionado">
+							{{ end }}
+						</a>
+					</div>
+
+					<div class="side-pop-content">
+						<h4>
+							<a href="{{ .Permalink }}">{{ .Title }}</a>
+						</h4>
+						<span class="date">{{ .Date.Format "02/01/2006" }}</span>
+					</div>
+
+				</div>
+			{{ end }}
+		{{ end }}
+
+	</div>
+	<div id="text-2" class="widget widget_text">
+		<div class="textwidget"><img src="http://solopine.com/sproutspoon/wp-content/uploads/2016/04/banner.png"></div>
+	</div>
+
+
+	<div id="laurel_facebook_widget-2" class="widget laurel_facebook_widget">
+		<h4 class="widget-title">Curta a gente no Facebook</h4>
+		<div class="fb-page" data-href="https://www.facebook.com/porsentido" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/porsentido" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/porsentido">Pôr Sentido</a></blockquote></div>
+
+	</div>
+</aside>

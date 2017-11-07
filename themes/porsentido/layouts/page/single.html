@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+	{{if .IsHome}}
+		<div class="sp-row post-layout">
+
+			{{ $paginator := .Paginate (after 1 (where .Site.Pages "Type" "post")) }}
+		    {{ range $paginator.Pages }}
+		        {{ .Render "postPage" }}
+		    {{ end }}
+
+			{{ partial "pagination" . }}
+		</div>
+	{{ end }}
+
+{{ end }}

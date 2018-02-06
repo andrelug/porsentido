@@ -10,6 +10,82 @@
 
 			{{ partial "pagination" . }}
 		</div>
+	{{ else }}
+		<div class="sp-row post-layout">
+			<div class="sp-col-12">
+				<article id="post-87" class="post-87 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion category-lifestyle">
+		
+		
+		
+		
+		
+		
+					<div class="post-img">
+						{{ if .Param "featured_image"}}
+						<img width="866" height="577" src="/images/{{ .Param " featured_image " }}.{{ .Param "featured_image_extension " }}" class="attachment-laurel-full-thumb size-laurel-full-thumb wp-post-image"
+						 alt="post13"> {{ else if .Param "hugo_image"}}
+						<img width="866" height="577" src="/{{ .Param " hugo_image "}}" class="attachment-laurel-full-thumb size-laurel-full-thumb wp-post-image"
+						 alt="post13"> {{ else }} {{ end }}
+					</div>
+		
+		
+		
+		
+		
+		
+					<div class="post-header ">
+		
+						<span class="cat">
+							{{ range .Params.categories }}
+							<a href="{{ " /categories/ " | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+							{{ end }}
+						</span>
+		
+						<h1>{{ .Title }}</h1>
+					</div>
+		
+					<div class="post-entry ">
+						{{ .Content }}
+					</div>
+		
+		
+		
+					
+		
+					
+		
+					<!-- Display Post Pagination -->
+					<div class="post-pagination">
+						{{ if .NextInSection }}
+						<div class="prev ">
+							<span class="post-pagi-title">Artigo anterior</span>
+							<a href="{{.NextInSection.Permalink}}">
+								<i class="fa fa-angle-left"></i> {{ .NextInSection.Title }}</a>
+						</div>
+						{{ end }} {{ if .PrevInSection }}
+						<div class="next">
+							<span class="post-pagi-title">Próximo artigo</span>
+							<a href="{{.PrevInSection.Permalink}}">{{ .PrevInSection.Title }}
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+						{{ end }}
+		
+					</div>
+		
+					<div class="post-comments" id="comments">
+		
+						<h4 class="block-heading">Comentários</h4>
+		
+						<div class="fb-comments" data-href="{{.Site.BaseURL}}{{ .RelPermalink }}" data-numposts="5" width="100%"></div>
+						<!-- #respond -->
+		
+		
+					</div>
+					<!-- end comments div -->
+				</article>
+			</div>
+		</div>
 	{{ end }}
 
 {{ end }}

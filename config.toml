@@ -4,6 +4,9 @@ paginate = 6
 theme = "porsentido"
 title = "Pôr Sentido"
 enableRobotsTXT = true
+defaultContentLanguage = "pt"
+[blackfriday]
+hrefTargetBlank = true
 [params]
 date_format = "0002-01-20T00:00:00+00:00"
 description = "Iglu é um blog para designers, programadores e freelancers com o foco em compartilhar recursos, tutoriais, informações e dicas."
@@ -12,7 +15,7 @@ insta_comments = "{{comments}}"
 insta_img = "{{image}}"
 insta_likes = "{{likes}}"
 insta_link = "{{link}}"
-name = "Pôr Sentido"
+name = "Pôr Sentido - Blog vegano e minimalista"
 [params.featured]
 hide = false
 [params.recentposts]

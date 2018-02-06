@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 a {
 	text-decoration:none;
-	color:#8db392;
+	color:#4D70A4;
 }
 p {
 	font-size:14px;
@@ -819,7 +819,7 @@ h1,h2,h3,h4,h5,h6, .post-entry blockquote p, .entry-content blockquote p, .post-
 		text-align:center;
 	}
 	.post-entry .read-more, .read-more {
-		background:#8db392;
+		background:#4D70A4;
 		color:#fff;
 		display:inline-block;
 		padding:7px 20px;
@@ -1464,7 +1464,7 @@ h1,h2,h3,h4,h5,h6, .post-entry blockquote p, .entry-content blockquote p, .post-
 .widget .tagcloud a:hover, .post-tags a:hover {
 	opacity:.7;
 	text-decoration:none;
-	background:#8db392;
+	background:#4D70A4;
 	color:#fff;
 }
 
@@ -1650,7 +1650,7 @@ h1,h2,h3,h4,h5,h6, .post-entry blockquote p, .entry-content blockquote p, .post-
 }
 .subscribe-box input[type=submit] {
 	width:100%;
-	background:#8db392;
+	background:#4D70A4;
 	color:#fff;
 	font-size:12px;
 	letter-spacing:2.5px;
@@ -2338,7 +2338,7 @@ div.wpcf7 {
 }
 .woocommerce .star-rating {
 	font-size:11px;
-	color:#8db392;
+	color:#4D70A4;
 }
 .woocommerce .woocommerce-product-rating .star-rating {
 	margin: 0.8em 6px 0 0;
@@ -2905,7 +2905,7 @@ input#rememberme {
 }
 .cart-contents:hover {text-decoration: none}
 .cart-contents .sp-count {
-	background:#8db392;
+	background:#4D70A4;
 	color:#fff;
 	display:inline-block;
 	width:16px;

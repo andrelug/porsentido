@@ -1,12 +1,12 @@
 name = "Pôr Sentido"
 license = "Creative Commons Attribution 3.0 Unported"
 licenselink = "//github.com/andrelug/igluhugo/blob/master/LICENSE.md"
-description = "Iglu é o melhor lugar para tutoriais sobre Design, Photoshop, Programação, Markegin Digital e Freelance."
+description = "Um blog sobre um estilo de vida vegano, minimalista e com o amor em seu centro."
 homepage = "https://www.igluonline.com"
-tags = ["design", "programação", "web development", "freelancer", "blog", "iglu"]
+tags = ["vegano", "vegan", "minimalismo", "amor", "blog", "pôr sentido"]
 features = ["", ""]
 min_version = 0.16
 
 [author]
-  name = "André Lucas"
+  name = "Amanda Mattar"
   homepage = "//github.com/andrelug"

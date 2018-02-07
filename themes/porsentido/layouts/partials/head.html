@@ -22,13 +22,38 @@
 		<script type="text/javascript" src="/js/jquery-migrate.min.js"></script>
 
 
-		<!-- Open Graph Meta Data by WP-Open-Graph plugin-->
-		<meta property="og:site_name" content="Pôr Sentido">
-		<meta property="og:locale" content="pt_br">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="Pôr Sentido">
-		<meta property="og:url" content="https://www.porsentido.com">
-		<meta property="og:description" content="Pôr Sentido em tudo que faz - lifestyle blog">
-		<meta property="og:image" content="/images/media.jpg">
+		<link rel="canonical" href="{{ .Permalink }}"> {{ if .RSSLink }}
+		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}"> {{ end }}
+		
+		<!-- Facebook -->
+		<meta property="og:url" content="{{ .Permalink }}"> {{if not .IsHome}}
+		<meta property="og:type" content="article">{{end}}
+		<meta property="og:title" content="{{ .Title}}">
+		<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Title }} - {{ .Site.Params.description}}{{ else }}{{ .Param "
+		 excerpt " }}{{ end }}" name="description">
+		<meta property="og:image" content="{{ .Site.BaseURL }}/{{ if .Param " hugo_image "}}{{ .Param "hugo_image
+		 "}}{{else}}images/{{.Param "featured_image " }}.{{ .Param "featured_image_extension " }}{{end}}">
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:site_name" content="Iglu">
+		
+		<meta property="fb:app_id" content="1998241227080712">
+		<meta property="fb:pages" content="258849557939387">
+		
+		<meta property="article:publisher" content="https://www.facebook.com/porsentido">
+		<meta property="article:author" content="https://www.facebook.com/porsentido/"> {{if .IsPage}}
+		<meta property="article:published_time" content="{{ .Date }}" /> {{ end }}
+		<meta property="article:modified_time" content="{{ .Lastmod }}" />
+		<meta property="article:section" content="{{ .Section }}" /> {{ with .Params.tags }}{{ range first 6 . }}
+		<meta property="article:tag" content="{{ . }}" /> {{ end }}{{ end }}
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@andrelug_">
+		<meta name="twitter:title" content="{{.Title}}">
+		<meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Title }} - {{ .Site.Params.description}}{{ else }}{{ .Param "
+		 excerpt " }}{{ end }}">
+		<meta name="twitter:image" content="{{ .Site.BaseURL }}/{{ if .Param " hugo_image "}}{{ .Param "hugo_image
+		 "}}{{else}}images/{{.Param "featured_image " }}.{{ .Param "featured_image_extension " }}{{end}}">
 
 	</head>
